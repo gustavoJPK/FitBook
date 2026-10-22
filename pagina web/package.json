@@ -1,0 +1,31 @@
+{
+  "name": "fitbook",
+  "version": "1.0.0",
+  "description": "FitBook - Sistema de reservas de clases para gimnasios (Node.js + Express + PostgreSQL)",
+  "type": "module",
+  "main": "server/src/server.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node server/src/server.js",
+    "dev": "node --watch server/src/server.js",
+    "db:init": "node server/src/db/init.js",
+    "db:seed": "node server/src/db/init.js --seed",
+    "db:reset": "node server/src/db/init.js --reset --seed",
+    "test": "node --test server/tests/api.test.js"
+  },
+  "dependencies": {
+    "@electric-sql/pglite": "^0.2.17",
+    "bcryptjs": "^2.4.3",
+    "compression": "^1.7.5",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.13.1"
+  },
+  "license": "MIT"
+}
